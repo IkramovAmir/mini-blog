@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Yangi blog qo‘shish</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Yangi blog qo‘shish</h1>
+
+    {% if success %}
+        <p>Blog muvaffaqiyatli qo‘shildi!</p>
+    {% endif %}
+
+    <form action="/add" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" required><br><br>
+        
+        <label for="content">Content:</label>
+        <textarea name="content" required></textarea><br><br>
+        
+        <button type="submit">Qo‘shish</button>
+    </form>
+
+    <a href="/">Bosh sahifa</a>
+</body>
+</html>

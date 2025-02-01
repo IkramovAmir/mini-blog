@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Qidiruv natijalari</title>
+</head>
+<body>
+    <h1>Qidiruv natijalari</h1>
+
+    {% if blogs %}
+        <ul>
+            {% for blog in blogs %}
+                <li>
+                    <a href="/blogs/{{ blog['id'] }}">{{ blog['title'] }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Hech qanday natija topilmadi.</p>
+    {% endif %}
+
+    <a href="/">Bosh sahifa</a>
+</body>
+</html>

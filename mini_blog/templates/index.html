@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Bosh sahifa</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Bosh sahifa</h1>
+
+    <form action="/" method="GET">
+        <input type="text" name="search" placeholder="Blogni qidirish...">
+        <button type="submit">Qidirish</button>
+    </form>
+
+    <h2>Bloglar</h2>
+    <ul>
+        {% for blog in blogs %}
+            <li>
+                <a href="/blogs/{{ blog.id }}">{{ blog.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/add">Yangi blog qo‘shish</a>
+</body>
+</html>

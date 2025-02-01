@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ blog.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>{{ blog.title }}</h1>
+    <p>{{ blog.content }}</p>
+
+    <a href="/delete/{{ blog.id }}">O‘chirish</a><br>
+    <a href="/">Bosh sahifa</a>
+</body>
+</html>
