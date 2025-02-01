@@ -1,4 +1,3 @@
-/* Bosh sahifa va umumiy sozlamalar */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -19,7 +18,6 @@ a:hover {
     color: #45a049;
 }
 
-/* Formani chiroyli qilish */
 form {
     background-color: #fff;
     padding: 20px;
@@ -64,7 +62,6 @@ li a {
     font-size: 18px;
 }
 
-/* Blog batafsil sahifa */
 #blog-detail {
     max-width: 800px;
     margin: 20px auto;
